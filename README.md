@@ -26,5 +26,5 @@ In above waveform, \
 **Yellow** represents PWM signal which drives the transistor.
 
 ## Applications
-It can be used as portable charger for mobile phones which supports 9V input(Almost all new mobile phones support 9V charging).
+It can be used as portable charger(vehicles having 12V battery) for mobile phones which supports 9V input(Almost all new mobile phones support 9V charging).
 
