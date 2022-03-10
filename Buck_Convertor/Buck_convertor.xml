@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/abhi/eSim-Workspace/Buck_convertor/Buck_convertor.sch</source>
+    <date>Thu Mar 10 18:37:55 2022</date>
+    <tool>Eeschema 4.0.7-e2-6376~61~ubuntu18.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Buck_convertor.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="v1">
+      <value>12</value>
+      <footprint>R1</footprint>
+      <libsource lib="eSim_Sources" part="DC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62226D7B</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>1.8m</value>
+      <libsource lib="eSim_Devices" part="inductor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62226DB0</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>3u</value>
+      <libsource lib="eSim_Devices" part="capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62226DF1</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>18</value>
+      <libsource lib="eSim_Devices" part="resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62226E24</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>plot_v1</value>
+      <libsource lib="eSim_Plot" part="plot_v1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6222FC37</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>plot_v1</value>
+      <libsource lib="eSim_Plot" part="plot_v1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6222FE70</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>plot_v1</value>
+      <libsource lib="eSim_Plot" part="plot_v1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6226E5D8</tstamp>
+    </comp>
+    <comp ref="v2">
+      <value>pulse</value>
+      <footprint>R1</footprint>
+      <libsource lib="eSim_Sources" part="pulse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6228EB21</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>eSim_Diode</value>
+      <libsource lib="eSim_Devices" part="eSim_Diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6229023B</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>2N2219</value>
+      <footprint>TO_SOT_Packages_THT:TO-39-3</footprint>
+      <libsource lib="transistors" part="2N2219"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6229E43E</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="transistors" part="2N2219">
+      <aliases>
+        <alias>BC140</alias>
+        <alias>BC141</alias>
+      </aliases>
+      <description>Vce 50V, Ic 800mA, NPN Transistor, TO-39</description>
+      <docs>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</docs>
+      <footprints>
+        <fp>TO?39*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N2219</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-39-3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Sources" part="DC">
+      <footprints>
+        <fp>1_pin</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">v</field>
+        <field name="Value">DC</field>
+        <field name="Footprint">R1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="power_out"/>
+        <pin num="2" name="-" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Devices" part="eSim_C">
+      <aliases>
+        <alias>capacitor</alias>
+      </aliases>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">eSim_C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Devices" part="eSim_Diode">
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">eSim_Diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Devices" part="eSim_L">
+      <aliases>
+        <alias>inductor</alias>
+      </aliases>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">eSim_L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Devices" part="eSim_R">
+      <aliases>
+        <alias>resistor</alias>
+      </aliases>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">eSim_R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Plot" part="plot_v1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">plot_v1</field>
+      </fields>
+      <pins>
+        <pin num="~" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="eSim_Sources" part="pulse">
+      <footprints>
+        <fp>1_pin</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">v</field>
+        <field name="Value">pulse</field>
+        <field name="Footprint">R1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="eSim_Plot">
+      <uri>/usr/share/kicad/library/eSim_Plot.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/usr/share/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="eSim_Devices">
+      <uri>/usr/share/kicad/library/eSim_Devices.lib</uri>
+    </library>
+    <library logical="eSim_Sources">
+      <uri>/usr/share/kicad/library/eSim_Sources.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="in">
+      <node ref="U1" pin="~"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="v1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(D1-Pad2)">
+      <node ref="L1" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="4" name="out">
+      <node ref="C1" pin="1"/>
+      <node ref="L1" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="5" name="pwm">
+      <node ref="U2" pin="~"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="v2" pin="1"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="v2" pin="2"/>
+      <node ref="v1" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+  </nets>
+</export>

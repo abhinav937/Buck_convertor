@@ -1,0 +1,20 @@
+* /home/abhi/eSim-Workspace/Buck_convertor/Buck_convertor.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Thu Mar 10 19:20:51 2022
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v1  in GND 12		
+L1  Net-_L1-Pad1_ out 1.8m		
+C1  out GND 3u		
+R1  out GND 18		
+U1  in plot_v1		
+U3  out plot_v1		
+U2  pwm plot_v1		
+v2  pwm GND pulse		
+Q1  Net-_L1-Pad1_ pwm in 2N2219		
+Q2  GND pwm Net-_L1-Pad1_ 2N3905		
+
+.end

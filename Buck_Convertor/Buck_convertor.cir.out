@@ -1,0 +1,26 @@
+* /home/abhi/esim-workspace/buck_convertor/buck_convertor.cir
+
+.include NPN.lib
+.include PNP.lib
+v1  in gnd 12
+l1  net-_l1-pad1_ out 1.8m
+c1  out gnd 3u
+r1  out gnd 18
+* u1  in plot_v1
+* u3  out plot_v1
+* u2  pwm plot_v1
+v2  pwm gnd pulse(0 15 0 1n 1n 33u 40u)
+q1 net-_l1-pad1_ pwm in Q2N2222
+q2 gnd pwm net-_l1-pad1_ Q2N2907A
+.tran 5e-06 2000e-06 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(in)
+plot v(out)
+plot v(pwm)
+.endc
+.end
